@@ -12,5 +12,7 @@ form.addEventListener('submit', (e) => {
       error.classList.remove('error-show');
       password.style.outline = '';
     }, 2000);
+  } else {
+    alert('Details submitted successfully')
   };
 });

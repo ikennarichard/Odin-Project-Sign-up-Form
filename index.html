@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign up Form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <main>
@@ -15,7 +16,7 @@
       <p class="top-message">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started <br> <span>You know you want to</span></p>
       <form>
         <div class="inputs-wrapper">
-          <h3>Lets do this</h3>
+          <h2>Lets do this</h2>
           <div class="form-inputs">
             <div class="field">
               <label for="firstname">First Name</label>
@@ -35,18 +36,18 @@
             </div>
             <div class="field">
               <label for="password">Password</label>
-              <input type="password" name="password" id="password">
-              <span class="errors"></span>
+              <input type="password" name="password" id="password" required>
+              <span class="error">* Passwords do not match</span>
             </div>
             <div class="field">
               <label for="confirm-password">Confirm Password</label>
-              <input type="password" name="password" id="confirm-password">
+              <input type="password" name="password" id="confirm-password" required>
             </div>
           </div>
         </div>
         <button type="submit">Create Account</button>
       </form>
-      <p>Already have an account? <a>Log in</a></p>
+      <p class="login-notice">Already have an account? <a href="#">Log in</a></p>
     </div>
   </main>
 </body>

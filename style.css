@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  display: grid;
+  justify-content: center;
+  background-color: rgba(28, 58, 24, 0.922);
+  font-family: 'Hind', sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(25%, 275px) 1fr;
+  height: 100%;
+  max-width: 900px;
+}
+
+.sidebar_image {
+  background: right/cover url('./images/pandu-ior-hckbnUpcm6E-unsplash.jpg') no-repeat;
+  width: 100%;
+}
+
+.heading {
+  translate: 0 200%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: aliceblue;
+  padding-block: 0.3em;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.962);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  width: 100%;
+}
+
+.container button {
+  margin-top: 1em;
+  appearance: none;
+  border: none;
+  padding: 0.7em;
+  border-radius: 2px 4px 5px 6px;
+  background-color: #596D48;
+  color: white;
+  font-size: 1rem;
+  transition: filter 1s ease;
+}
+
+.container button:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.container p, .container button  {
+  margin-inline-start: 1em;
+}
+
+.top-message {
+  max-width: 600px;
+  margin-top: 2.5em;
+  font-size: 1.2rem;
+  color: #465d2e;
+}
+
+.top-message > span {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.inputs-wrapper {
+  background-color: rgb(255, 255, 255);
+  padding: 0.8em 0.7em;
+  box-shadow: 9px 4px 23px rgba(0,0,0,0.1);
+  color: #465d2e;
+}
+
+.form-inputs {
+  display: grid;
+  column-gap: 2em;
+  row-gap: 0.6em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: min(600px, 100%);
+}
+
+.form-inputs label {
+  text-transform: uppercase;
+  font-size: 0.77rem;
+  font-weight: 600;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field > input {
+  padding: 0.3em;
+}
+
+.field > input:focus {
+  box-shadow: 0.5px 1px 2.2px 2px rgb(10, 35, 13);
+  border: none;
+}
+
+.error {
+  color: tomato;
+  font-size: 0.8rem;
+  margin-top: 2px;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.error-show {
+  display: block;
+  max-height: 17px;
+  opacity: 1;
+}
+
+.login-notice {
+  padding-bottom: 2em;
+}
+
+@media(max-width: 600px) {
+  main {
+    grid-template-columns: none;
+    grid-template-rows: 150px 1fr;
+  }
+
+  .sidebar_image {
+    display: grid;
+    align-content: center;
+  }
+
+  .heading {
+    translate: 0;
+  }
+
+  .container p {
+    margin-inline-start: 0;
+    padding: 0.6em;
+  }
+}
